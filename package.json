@@ -1,0 +1,70 @@
+{
+  "name": "@lucid-softworks/queue-store-sqlite",
+  "version": "0.0.0",
+  "description": "Atomic durable QueueStore backed by Node's built-in SQLite driver.",
+  "keywords": [
+    "javascript",
+    "queue",
+    "sqlite",
+    "store",
+    "typescript",
+    "utility"
+  ],
+  "homepage": "https://github.com/lucid-softworks/queue-store-sqlite#readme",
+  "bugs": {
+    "url": "https://github.com/lucid-softworks/queue-store-sqlite/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucid-softworks/queue-store-sqlite.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "bench": "vitest bench --run",
+    "bench:smoke": "VITEST_BENCHMARK_SMOKE=1 vitest bench --run",
+    "build": "tsc -p tsconfig.build.json",
+    "check": "oxfmt --check . && oxlint . && tsc -p tsconfig.json && tsc -p tsconfig.build.json && vitest run --coverage && publint && VITEST_BENCHMARK_SMOKE=1 vitest bench --run",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint .",
+    "pack:check": "publint",
+    "test": "vitest run --coverage",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@lucid-softworks/queue-core": "^0.1.0",
+    "@lucid-softworks/queue-store-codec": "^0.1.0"
+  },
+  "devDependencies": {
+    "@lucid-softworks/oxfmt-config": "^0.1.1",
+    "@lucid-softworks/oxlint-config": "^0.1.0",
+    "@lucid-softworks/tsconfig": "^0.1.0",
+    "@lucid-softworks/vitest-config": "^0.1.1",
+    "@types/node": "26.1.1",
+    "@vitest/coverage-v8": "4.1.10",
+    "oxfmt": "0.60.0",
+    "oxlint": "1.75.0",
+    "publint": "0.3.22",
+    "typescript": "7.0.2",
+    "vitest": "4.1.10"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.16.0"
+}

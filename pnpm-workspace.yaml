@@ -1,0 +1,8 @@
+minimumReleaseAgeExclude:
+  - "@lucid-softworks/oxfmt-config@0.1.1"
+  - "@lucid-softworks/oxlint-config@0.1.0"
+  - "@lucid-softworks/queue-core@0.1.0"
+  - "@lucid-softworks/queue-store-codec@0.1.0"
+  - "@lucid-softworks/tsconfig@0.1.0"
+  - "@lucid-softworks/vitest-config@0.1.1"
+  - "@lucid-softworks/structured-value-codec@0.1.0"
