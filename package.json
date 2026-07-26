@@ -1,6 +1,6 @@
 {
   "name": "@lucid-softworks/queue-store-sqlite",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Atomic durable QueueStore backed by Node's built-in SQLite driver.",
   "keywords": [
     "javascript",
